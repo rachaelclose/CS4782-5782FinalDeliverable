@@ -23,6 +23,8 @@ We aim to reproduce the performance shown in Figure 3, where stochastic depth re
 ResNetDrop.py implements ResNet with stochastic depth. It has the same architecture as ResNet with the following differences: ResidualBlockDrop has an additional argument survival_rate. In the training part of the forward function of ResidualBlockDrop, we use survival_rate to sample a Bernoulli variable gate. If the gate is 0, the output is the residual connection only. If testing, we use the survival_rate to scale down the output of ResidualBlockDrop. 
 The __init __ of ResNetDrop creates a list of 54 survival rates, determined using the linear decay rule. It splits this list into three lists, one for each block_layer. The block_layer function assigns the respective survival rates to each residual block. 
 
+train.py follows closely the training methods used by the authors of the paper for the 110-layer models. We trained two models, a baseline ResNet and a ResNet with stochastic depth, using SGD with Nesterov momentum, weight decay, and a MultiStepLR scheduler with milestones at 250 and 375 epochs, in order to have a fair comparison and stay true to paper. CIFAR-10 data is preprocessed with standard augmentation techniques, like random crop, horizontal flip, normalization, etc. Training, validation, and test splits are handled manually and allow for performance tracking.
+
 ### Reproduction Steps
 The project can be reproduced by running train.py - this script can be copied into a 
 Google collab notebook or it can be also be run on a G2 instance. Using a G2 instance, 
