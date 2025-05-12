@@ -32,20 +32,28 @@ train.py follows closely the training methods used by the authors of the paper f
 
 ### Reproduction Steps
 In order to reimplement our code and reproduce the results:
-- Clone the GitHub repository
-- Install the required libraries
- - Torch
- - Torchvision
- - Matplotlib
-  - Pip install torch torchvision matplotlib
-- Ensure that the following file structure exists:
-	|-train.py
-	|-ResNet.py
-	|-ResNetDrop.py
-	|-checkpoints/
+* **Clone the GitHub repository**
+```bash
+git clone https://github.com/rachaelclose/CS4782-5782FinalDeliverable.git
+cd CS4782-5782FinalDeliverable
+```
+* **Install the required libraries**
+  * torch
+  * torchvision
+  * matplotlib
+```bash
+pip install torch torchvision matplotlib
+```
+* **Ensure that the following file structure exists:**
+<pre>├── train.py 
+├── ResNet.py
+├── ResNetDrop.py 
+└── checkpoints/ </pre>
 
-- Train the models
- - python train.py
+* **Train the models**
+```bash
+python train.py
+```
 
 We run our code using the G2 cluster at Cornell. Using a G2 instance,  our code ran for about 13 hours. 
 
