@@ -24,6 +24,9 @@ ResNetDrop.py implements ResNet with stochastic depth. It has the same architect
 The __init __ of ResNetDrop creates a list of 54 survival rates, determined using the linear decay rule. It splits this list into three lists, one for each block_layer. The block_layer function assigns the respective survival rates to each residual block. 
 
 ### Reproduction Steps
+The project can be reproduced by running train.py - this script can be copied into a 
+Google collab notebook or it can be also be run on a G2 instance. Using a G2 instance, 
+our code ran for about 13 hours. 
 
 ### Results/Insights
 
