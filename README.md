@@ -10,6 +10,7 @@ We aim to reproduce the performance shown in Figure 3, where stochastic depth re
 ### GitHub Contents
 
 * `code/` contains the full PyTorch re-implementation of the stochastic depth training procedure, including:
+  * `ResNet.py` - Base ResNet
   * `ResNetDrop.py` - ResNet with Stochastic Depth model
   * `train.py` - main training loop
 * `data/` contains a `README.md` file with instructions on how to download and preprocess the CIFAR-10 dataset
