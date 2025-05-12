@@ -58,7 +58,7 @@ python train.py
 We run our code using the G2 cluster at Cornell. Using a G2 instance,  our code ran for about 13 hours. 
 
 ### Results/Insights
-![image] (results/figure3.png)
+![Figure 3 Results] (results/figure3.png)
 
 Our code managed to reproduce extremely similar results to those in the paper (6.80% and 5.20% error for constant and stochastic in our results, respectively; 6.41% and 5.25% error for constant and stochastic in the paper, respectively). You can expect very similar results to the paper’s 110-layer ResNet model, with small variations given the randomness of the ResNet Stochastic model. You will probably also notice a shorter training time for the Stochastic model, but this varies depending on the hardware used.
 
